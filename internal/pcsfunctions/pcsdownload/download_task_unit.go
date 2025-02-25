@@ -1,6 +1,7 @@
 package pcsdownload
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/qjfoidnh/BaiduPCS-Go/baidupcs"
