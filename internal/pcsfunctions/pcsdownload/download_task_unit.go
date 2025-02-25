@@ -517,6 +517,9 @@ func (dtu *DownloadTaskUnit) Run() (result *taskframework.TaskUnitRunResult) {
 		ok = dtu.pcsOrStreamingDownload(dtu.DownloadMode, result)
 	}
 
+	jsonString, err := json.Marshal(result)
+	fmt.Println(string(jsonString)) // 输出JSON字符串
+
 	if !ok {
 		// 以上执行不成功, 返回
 		return result
